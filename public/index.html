@@ -24,12 +24,9 @@
         });
 
 
-        socket.emit('mensaje', {
-            nombre: 'Fernando'
-        });
-
-        socket.on('mensaje', function(payload) {
-            console.log('Escuhando:', payload);
+        socket.on('active-bands', function(payload) {
+            console.clear();
+            console.table(payload);
         });
     </script>
 
